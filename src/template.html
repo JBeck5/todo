@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To Do App</title>
+</head>
+<body>
+    <div class="grid-container">
+        <!-- Sidebar Menu -->
+        <aside class="sidebar">
+            <div class="greeting-header">Greetings User</div>
+            <nav role="navigation">
+                <ul id="side-menu">
+                    <li><img src="./images/inbox.png" >Inbox</li>
+                    <li><img src="./images/today.png">Today</li>
+                    <li><img src="./images/tomorrow.png">Tomorrow</li>
+                    <li><img src="./images/upcoming.png">Upcoming</li>
+                    <li><img src="./images/completed.png">Completed</li>
+                </ul>
+            </nav>
+            <section class="projects-menu">
+                <h2>My Projects</h2>
+                <button id="btn-new-project">
+                    <img class="new-img" src="./images/add.png">
+                </button>
+            </section>
+        </aside>
+        
+        <!-- Main Board/Display -->
+        <div class="project-board"></div>
+
+        <!-- Project Modal -->
+        <div id="project-modal" class="modal">
+            <form class="new-project-modal">
+                <div class="modal-header">
+                    <h2 id="project-modal-header">New Project</h2>
+                    <span id="close-project-modal" class="btn-close">&times;</span>
+                </div>
+                <div class="modal-content">
+                    <div class="form-field">
+                        <label for="project-name">Name</label>
+                        <input type="text" id="project-name" placeholder="Project" />
+                    </div>
+                </div>
+                <div class="modal-btn-content">
+                    <button class="btn-add" id="btn-add-project">Create</button>
+                    <button class="btn-cancel" id="btn-cancel-project">Cancel</button>
+                </div>
+            </form>
+        </div>
+
+        <!-- ToDo Modal-->
+        <div id="todo-modal" class="modal">
+            <form class="new-todo-modal">
+                <div class="modal-header">
+                    <h2 id="todo-modal-header">New Task</h2>
+                    <span id="close-todo-modal" class="btn-close">&times;</span>
+                </div>
+                <div class="modal-content">
+                    <div class="form-field">
+                        <label for="todo-name">Name</label>
+                        <input type="text" id="todo-name" placeholder="Task" />
+                    </div>
+                    <div class="form-field">
+                        <label for="todo-description">Description</label>
+                        <textarea id="todo-description" name="description" rows="3"></textarea>
+                    </div>
+                    <div class="form-field">
+                        <label for="todo-priority">Priority</label>
+                        <select id="todo-priority" name="priority">
+                            <option value="Low">Low</option>
+                            <option value="Medium">Medium</option>
+                            <option value="High">High</option>
+                        </select>
+                    </div>
+                    <div class="form-field">
+                        <label for="todo-due-date">Due Date</label>
+                        <input type="date" id="todo-due-date" name="dueDate" />
+                    </div>
+                </div>
+                <div class="modal-btn-content">
+                    <button class="btn-create" id="create-todo-btn">Create</button>
+                    <button class="btn-cancel" id="cancel-todo-btn">Cancel</button>
+                </div>
+            </form>
+        </div>
+
+    </div>
+</body>
+</html>
