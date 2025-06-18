@@ -10,11 +10,6 @@ module.exports = {
     path: path.resolve(__dirname, "dist"),
     clean: true,
   },
-  "scripts": {
-    "build": "webpack",
-    "dev": "webpack serve",
-    "deploy": "git subtree push --prefix dist origin gh-pages"
-  },
   devtool: "eval-source-map",
   devServer: {
     watchFiles: ["./src/template.html"],
@@ -40,4 +35,9 @@ module.exports = {
       },
     ],
   },
+  performance: {
+    hints: false,
+    maxEntrypointSize: 512000,
+    maxAssetSize: 512000
+  }
 };
