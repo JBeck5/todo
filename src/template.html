@@ -32,58 +32,58 @@
 
         <!-- Project Modal -->
         <div id="project-modal" class="modal">
-            <form class="new-project-modal">
+            <div class="modal-content">
                 <div class="modal-header">
                     <h2 id="project-modal-header">New Project</h2>
                     <span id="close-project-modal" class="btn-close">&times;</span>
                 </div>
-                <div class="modal-content">
-                    <div class="form-field">
-                        <label for="project-name">Name</label>
-                        <input type="text" id="project-name" placeholder="Project" />
+                <form class="new-project-modal" id="projectForm">
+                        <div class="form-field">
+                            <label for="project-name">Name</label>
+                            <input type="text" id="project-name" placeholder="Project" />
+                        </div>
+                    <div class="modal-btn-content">
+                        <button type="submit" class="btn btn-add" id="btn-add-project">Create</button>
+                        <button type="button" class="btn btn-cancel" id="btn-cancel-project">Cancel</button>
                     </div>
-                </div>
-                <div class="modal-btn-content">
-                    <button class="btn-add" id="btn-add-project">Create</button>
-                    <button class="btn-cancel" id="btn-cancel-project">Cancel</button>
-                </div>
-            </form>
+                </form>
+            </div>
         </div>
 
         <!-- ToDo Modal-->
         <div id="todo-modal" class="modal">
-            <form class="new-todo-modal">
+            <div class="modal-content">
                 <div class="modal-header">
                     <h2 id="todo-modal-header">New Task</h2>
                     <span id="close-todo-modal" class="btn-close">&times;</span>
                 </div>
-                <div class="modal-content">
-                    <div class="form-field">
-                        <label for="todo-name">Name</label>
-                        <input type="text" id="todo-name" placeholder="Task" />
+                <form class="new-todo-modal">
+                        <div class="form-field">
+                            <label for="todo-name">Name</label>
+                            <input type="text" id="todo-name" placeholder="Task" />
+                        </div>
+                        <div class="form-field">
+                            <label for="todo-description">Description</label>
+                            <textarea id="todo-description" name="description" rows="3"></textarea>
+                        </div>
+                        <div class="form-field">
+                            <label for="todo-priority">Priority</label>
+                            <select id="todo-priority" name="priority">
+                                <option value="Low">Low</option>
+                                <option value="Medium">Medium</option>
+                                <option value="High">High</option>
+                            </select>
+                        </div>
+                        <div class="form-field">
+                            <label for="todo-due-date">Due Date</label>
+                            <input type="date" id="todo-due-date" name="dueDate" />
+                        </div>
+                    <div class="modal-btn-content">
+                        <button type="submit" class="btn btn-create" id="create-todo-btn">Create</button>
+                        <button type="button" class="btn btn-cancel" id="cancel-todo-btn">Cancel</button>
                     </div>
-                    <div class="form-field">
-                        <label for="todo-description">Description</label>
-                        <textarea id="todo-description" name="description" rows="3"></textarea>
-                    </div>
-                    <div class="form-field">
-                        <label for="todo-priority">Priority</label>
-                        <select id="todo-priority" name="priority">
-                            <option value="Low">Low</option>
-                            <option value="Medium">Medium</option>
-                            <option value="High">High</option>
-                        </select>
-                    </div>
-                    <div class="form-field">
-                        <label for="todo-due-date">Due Date</label>
-                        <input type="date" id="todo-due-date" name="dueDate" />
-                    </div>
-                </div>
-                <div class="modal-btn-content">
-                    <button class="btn-create" id="create-todo-btn">Create</button>
-                    <button class="btn-cancel" id="cancel-todo-btn">Cancel</button>
-                </div>
-            </form>
+                </form>
+            </div>
         </div>
 
     </div>
